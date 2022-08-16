@@ -15,9 +15,10 @@ body {
 
 }
 
-.container {
+.fluid {
     max-width: 1200px;
     margin: 0 auto;
+    overflow-y: hidden;
 }
 
 /* --------title------- */
@@ -71,6 +72,7 @@ img {
 
 .hero-part .page-content {
     text-align: center;
+    padding: 0 1.5rem;
     line-height: 30px;
 }
 
@@ -101,11 +103,11 @@ img {
 .title h3::after {
     content: "";
     position: absolute;
-    height: 3px;
+    height: 4px;
     width: 36px;
     background-color: orange;
     bottom: -13px;
-    left: 2%;
+    left: 1.1rem;
     margin-left: -18px;
 }
 
@@ -142,25 +144,29 @@ img {
 #content .para {
     width: 62%;
     margin: 0 auto;
+    padding: 0 1.5rem;
     text-align: center;
+    line-height: 2rem;
 }
 
 /* content part ends here */
 /* ----middle part-------- */
-.middle-part .main_pictures{
+.middle-part .main_pictures {
     background: url(https://cdn.shopify.com/s/files/1/0552/1306/4365/files/marking-wood-to-cut_1080x.jpg?v=1653865542);
-    height: 100vh;
+    height: 70vh;
     background-position: center;
     background-size: cover;
     position: relative;
 }
-.middle-part .para{
+
+.middle-part .content p {
     padding: 1rem 0;
-        text-align: center;
-        width: 65%;
-        line-height: 2rem;
-        margin: 0 auto;
+    text-align: center;
+    width: 65%;
+    line-height: 2rem;
+    margin: 0 auto;
 }
+
 /* ----middle part ends-------- */
 /* recycle parts starts here */
 .recycling .main_pictures {
@@ -169,7 +175,10 @@ img {
     background-size: cover;
     position: relative;
     height: 65vh;
-    margin: 0 2rem;
+    margin: 0 1rem;
+}
+.recycling .para{
+    line-height: 2rem;
 }
 
 .main_pictures::before {
@@ -193,32 +202,33 @@ img {
 #newsletter .title {
     padding-top: 3rem;
 }
-#newsletter .para{
+
+#newsletter .para {
     text-align: center;
 }
-.form-group{
+
+.form-group {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 3rem;
 }
-.middle-part .para{
-        width: 100%;
-        line-height: 2rem;
-        padding-bottom: 2rem;
-        
-}
-#newsletter #email-form{
+
+/* text-align: center; */
+
+#newsletter #email-form {
     padding: 1rem;
     max-width: 500px;
     width: 31rem;
     border: none;
 }
-#newsletter #email-form::placeholder{
+
+#newsletter #email-form::placeholder {
     font-size: 1rem;
 }
- .form-group button{
+
+.form-group button {
     padding: .8rem;
     background-color: black;
     border: none;
@@ -231,6 +241,7 @@ img {
     font-size: .9rem;
     cursor: pointer;
 }
+
 /* newsletter ends here */
 
 
@@ -243,44 +254,78 @@ img {
 
 
 
-@media all and (max-width:768px){
+@media all and (max-width:768px) {
     .title h2 {
-    font-size: 1rem;
+        font-size: 1rem;
     }
+    .title h3 {
+      
+        font-size: 1.2rem;
+      
+    }
+    .main_pictures {
+       
+        margin: 0 1rem;
+    }
+
     .hero-content .title h2 {
         line-height: 1.6;
         font-size: 1rem;
+        padding: 0 1.5rem;
     }
+    
     .hero-content .link {
-       font-size: .8rem;
+        font-size: .8rem;
     }
-    .middle-part .main_pictures{
-       height: 75vh;
-    }
+
     #content .para {
         width: 100%;
         line-height: 2rem;
-        margin: 0 auto;
         text-align: center;
     }
+
+    .middle-part .content p {
+        padding: 1rem;
+        width: 100%;
+    }
+    .image_content {
+        bottom: 3rem;
+        left: 1rem;
+    }
     
+    .image_content p {
+        width: 95%;
+        padding: 0;
+    }
+    .middle-part .main_pictures {
+        height: 40vh;  
+    }
+    #newsletter{
+        margin: 0 auto;
+    }
     #newsletter .title {
         padding-top: 1rem;
     }
-    .form-group{
+    #newsletter .title-section{
+        padding: 0 1.5rem;
+    }
+    .form-group {
         padding: 1.5rem;
     }
-    #newsletter #email-form{
+
+    #newsletter #email-form {
         padding: 1rem;
         min-width: 100%;
         margin-bottom: 1rem;
-       display: block; 
+        display: block;
 
     }
-    #newsletter #email-form::placeholder{
+
+    #newsletter #email-form::placeholder {
         font-size: 1rem;
     }
-     .form-group button{
+
+    .form-group button {
         min-width: 100%;
     }
 
